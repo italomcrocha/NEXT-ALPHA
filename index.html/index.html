@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT ALPHA | Promo Next</title>
+
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- ÍCONES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <style>
+  /* RESET */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* FUNDO COM DEGRADÊ */
+  body {
+    background: radial-gradient(circle at top, #001830, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #f0f8ff;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* LAYOUT PRINCIPAL */
+  .container-principal {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    align-items: stretch; /* garante alturas iguais */
+  }
+
+  /* COLUNAS LATERAIS */
+  .coluna-lateral {
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,40,80,0.4));
+    border: 1px solid rgba(0,255,255,0.1);
+    box-shadow: 0 0 15px rgba(0,200,255,0.1);
+    border-radius: 20px;
+    padding: 25px;
+    color: #fff;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* mesma altura que as demais colunas */
+  }
+
+  .coluna-lateral:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0,200,255,0.3);
+  }
+
+  .coluna-lateral h3 {
+    color: #7DF9FF;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .coluna-lateral a {
+    color: #7DF9FF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .coluna-lateral a:hover {
+    text-decoration: underline;
+  }
+
+  /* CONTEÚDO CENTRAL */
+  .conteudo-central {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,255,255,0.15);
+    box-shadow: 0 0 30px rgba(0,180,255,0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.2s ease-in-out;
+    height: 100%;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* CABEÇALHO */
+  header::before {
+    content: "Promoções em tempo real 🚀";
+    display: block;
+    font-size: 0.9rem;
+    color: #00e0ff;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    background: linear-gradient(90deg, #00aaff, #7DF9FF, #00aaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: brilho 3s linear infinite, pulse 2s ease-in-out infinite alternate;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00e0ff, 0 0 20px #00e0ff, 0 0 40px #0078ff;
+  }
+
+  @keyframes brilho {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+  }
+
+  @keyframes pulse {
+    from { text-shadow: 0 0 5px #00e0ff, 0 0 10px #00e0ff; }
+    to { text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+  }
+
+  header p {
+    font-size: 1.1rem;
+    color: #b0c7d6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-inline: auto;
+  }
+
+  /* LINKS */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .link-btn {
+    text-decoration: none;
+    background: linear-gradient(90deg, #0078ff, #00e0ff);
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,200,255,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,200,255,0.6);
+    background: linear-gradient(90deg, #00e0ff, #0078ff);
+  }
+
+  .link-btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s;
+  }
+
+  .link-btn:hover::before {
+    left: 100%;
+  }
+
+  .link-btn i {
+    margin-right: 8px;
+  }
+
+  /* RODAPÉ */
+  footer {
+    background: rgba(0, 10, 30, 0.6);
+    padding: 25px;
+    border-top: 1px solid rgba(0,255,255,0.1);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 40px;
+  }
+
+  /* RESPONSIVIDADE */
+  @media (max-width: 992px) {
+    .container-principal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .coluna-lateral { display: none; }
+    .conteudo-central { padding: 30px 20px; }
+    header h1 { font-size: 2.4rem; }
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-principal">
+
+    <!-- COLUNA ESQUERDA -->
+    <aside class="coluna-lateral esquerda">
+      <h3>Anúncios & Destaques</h3>
+      <p style="color:#ddd; text-align:center;">Espaço reservado para futuras promoções ou informações.</p>
+    </aside>
+
+    <!-- CONTEÚDO CENTRAL -->
+    <main class="conteudo-central">
+      <header>
+        <h1>NEXT ALPHA</h1>
+        <p>Seu próximo achado começa aqui — com a NEXT ALPHA. Clique nos links para entrar em nossos grupos exclusivos!</p>
+      </header>
+
+      <section class="links">
+        <a href="https://www.instagram.com/mepiva_/?utm_source=ig_web_button_share_sheet" class="link-btn" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://chat.whatsapp.com/EAnPd6pMjRWBDMldGrKsbd" class="link-btn" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Grupo PROMO NEXT
+        </a>
+        <a href="#" class="link-btn">
+          <i class="fa-solid fa-gears"></i> Grupo Secundário (em Desenvolvimento)
+        </a>
+      </section>
+    </main>
+
+    <!-- COLUNA DIREITA -->
+    <aside class="coluna-lateral direita">
+      <h3>Nossos Canais</h3>
+      <p style="color:#ddd; text-align:center;">Links de afiliação e redes</p>
+      <a href="#">Canal Telegram</a>
+      <hr style="width: 80%; margin: 10px 0; border-color: rgba(255,255,255,0.2);">
+      <a href="#">Grupo VIP</a>
+    </aside>
+
+  </div>
+
+  <footer>
+    © 2025 NEXT ALPHA — Todos os direitos preservados
+  </footer>
+
+</body>
+</html>
